@@ -4,6 +4,10 @@
   font-size: 30px;
 }
 
+.title {
+  margin-top: 1%;
+}
+
 .app_container {
   display: flex;
   justify-content: center;
