@@ -6,6 +6,7 @@ import Weather from './components/Weather'
 function App() {
   const [position, setPosition] = useState()
   const [weather, setWeather] = useState()
+  const [units, setUnits] = useState('Switch to ')
   const API_KEY = '49c7c564cadca82ba7ddccfa38936a19'
 
   useEffect(() => {
@@ -18,16 +19,6 @@ function App() {
 
   console.log(weather)
 
-  let options = {
-    enableHighAccuracy: true,
-    timeout: 8000,
-    maximunAge: 0
-  }
-
-  let error = () => {
-    console.warn(`ERROR(${err.code}): ${err.message}`);
-  }
-
   const getPosition = () => {
 
     const success = pos => {
@@ -35,7 +26,7 @@ function App() {
       let lon = pos?.coords.longitude
       setPosition({ lon, lat })
     }
-    navigator.geolocation.getCurrentPosition(success, error, options);
+    navigator.geolocation.getCurrentPosition(success);
   }
 
   return (
@@ -43,9 +34,6 @@ function App() {
       <Weather weather={weather} />
       <button className="location" onClick={getPosition}>
         Get location
-      </button>
-      <button className="switch">
-        Switch to metric
       </button>
     </div>
   )

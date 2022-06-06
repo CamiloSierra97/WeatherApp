@@ -33,13 +33,26 @@
 }
 
 .switch {
-  position: absolute;
-  top: 90%;
-  padding: 0%;
+  font-family: 'Righteous', cursive;
+  font-size: 20px;
+  position: relative;
+  bottom: 24px;
+  border-radius: 20px;
+  background-color: #4B7BE5;
+  padding: 5px 20px 5px;
+  border-width: 4px;
+  border-style: outset;
+  border-color: rgba(85, 52, 165, 0.5);
+  margin-top: 2%;
+}
+
+.switch:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .card {
-  display: flex;
+  display: block;
   justify-content: center;
   padding-top: 10%;
   font-size: 20px;
@@ -347,6 +360,7 @@
 .rain__2 {
   list-style: none;
 }
+
 
 @keyframes sunny {
   50% {

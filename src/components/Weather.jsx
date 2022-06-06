@@ -1,16 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 
 const Weather = ({ weather }) => {
 
+    const fahrenheit = (Math.floor((weather?.main.temp - 273.15) * (9 / 5) + 32))
 
-    const fahrenheit = (Math.round((weather?.main.temp - 273.15) * (9 / 5)))
+    const fahrenheitMax = (Math.floor((weather?.main.temp_max - 273.15) * (9 / 5) + 32))
 
-    const fahrenheitMax = (Math.round((weather?.main.temp_max - 273.15) * (9 / 5)))
+    const fahrenheitMin = (Math.floor((weather?.main.temp_min - 273.15) * (9 / 5) + 32))
 
-    const fahrenheitMin = (Math.round((weather?.main.temp_min - 273.15) * (9 / 5)))
+    const celsius = (Math.floor(weather?.main.temp - 273.15))
 
-    console.log(typeof(weather?.weather[0].main)) 
+    const celsiusMax = (Math.floor(weather?.main.temp_max - 273.15))
+
+    const celsiusMin = (Math.floor(weather?.main.temp_min - 273.15))
+
+    const [units, setUnits] = useState(true)
+
+    const [unitsText, setUnitsText] = useState('F')
+
+    const toggleUnits = () => setUnits(!units)
+
+    const toggleText = () => setUnitsText(!unitsText)
+
+    const display = () => {
+        toggleUnits();
+        toggleText()
+    }
+
 
     return (
         <div className='app_container'>
@@ -63,25 +80,30 @@ const Weather = ({ weather }) => {
                                 </li>
                                 <li className="type">
                                     <p className="temperature">
-                                        Temperature: {fahrenheit}&#176; F
+                                        Temperature: {units ? fahrenheit : celsius} &#176;{unitsText ? 'F' : 'C'}
                                     </p>
                                 </li>
                                 <li className="type">
                                     <p className="max_temp">
-                                        Max. Temperature: {fahrenheitMax} &#176; F
+                                        Max. Temperature: {units ? fahrenheitMax : celsiusMax} &#176;{unitsText ? 'F' : 'C'}
                                     </p>
                                 </li>
                                 <li className="type">
                                     <p className="min_temp">
-                                        Min. Temperature: {fahrenheitMin} &#176; F
+                                        Min. Temperature: {units ? fahrenheitMin : celsiusMin} &#176;{unitsText ? 'F' : 'C'}
                                     </p>
                                 </li>
                             </ul>
+                            <button className="switch" onClick={display}>
+                                {
+                                    unitsText ? 'Switch to metric' : 'Switch to imperial'
+                                }
+                            </button>
                         </section>
                     </div>
                 </div>
-
             </aside>
+
         </div>
     )
 }
