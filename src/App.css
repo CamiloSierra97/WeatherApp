@@ -48,7 +48,6 @@ h1 {
   font-family: 'Righteous', cursive;
   font-size: 20px;
   position: relative;
-  bottom: 24px;
   border-radius: 20px;
   background-color: #4B7BE5;
   padding: 5px 20px 5px;
@@ -66,7 +65,7 @@ h1 {
 .card {
   display: block;
   justify-content: center;
-  padding-top: 10%;
+  padding-top: 3%;
   font-size: 20px;
 }
 
@@ -453,6 +452,13 @@ h1 {
   color: #4B7BE5;
 }
 
+::-moz-selection {
+  color: #4B7BE5;
+}
+
 ::-webkit-scrollbar {
   display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
+
