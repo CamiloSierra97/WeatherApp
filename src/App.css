@@ -68,6 +68,7 @@
   list-style: none;
   padding: 0px;
   flex-direction: column;
+  margin: 0px;
 }
 
 .type {
