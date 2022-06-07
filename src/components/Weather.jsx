@@ -75,7 +75,7 @@ const Weather = ({ weather }) => {
                                 </li>
                                 <li className="type">
                                     <p className="description">
-                                        {weather?.description}
+                                        {weather?.weather[0].description}
                                     </p>
                                 </li>
                                 <li className="type">
