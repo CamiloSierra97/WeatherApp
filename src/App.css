@@ -48,9 +48,10 @@ h1 {
 }
 
 .image {
+  display: flex;
   position: absolute;
   top: 20%;
-  left: 30.5%;
+  justify-content: center;
 }
 
 .location {
@@ -63,6 +64,7 @@ h1 {
   border-width: 4px;
   border-style: outset;
   border-color: rgba(85, 52, 165, 0.5);
+  margin-top: 2%;
 }
 
 .location:hover {
@@ -111,7 +113,7 @@ h1 {
 
 .container {
   position: absolute;
-  width: 600px;
+  width: 45vw;
   padding-top: 50px;
 }
 
