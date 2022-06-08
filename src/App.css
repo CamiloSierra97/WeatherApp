@@ -38,7 +38,8 @@ h1 {
 }
 
 .title {
-  margin-top: 1%;
+  margin-top: 0.5%;
+  margin-bottom: 1%;
 }
 
 .app_container {
@@ -49,14 +50,13 @@ h1 {
 .image {
   position: absolute;
   top: 20%;
-  left: 35.5%;
+  left: 30.5%;
 }
 
 .location {
   font-family: 'Righteous', cursive;
   font-size: 1.25rem;
   position: relative;
-  top: 24px;
   border-radius: 20px;
   background-color: #4B7BE5;
   padding: 5px 20px 5px;
@@ -116,8 +116,8 @@ h1 {
 }
 
 .sunny {
-  width: 600px;
-  height: 600px;
+  width: 100%;
+  aspect-ratio: 1;
   border-radius: 40%;
   z-index: 120;
   background: linear-gradient(to top right, rgba(255, 87, 34, 1) 0%, rgba(251, 140, 0, 1) 100%);
@@ -128,8 +128,8 @@ h1 {
   position: absolute;
   top: -10%;
   left: 65%;
-  width: 231px;
-  height: 231px;
+  width: 40%;
+  aspect-ratio: 1;
   border-radius: 100%;
   background: linear-gradient(to bottom left, rgba(255, 235, 59, 1) 0%, rgba(249, 168, 37, 1) 90%);
   box-shadow: 1px 1px 30px rgb(255 160 0);
