@@ -95,7 +95,7 @@ h1 {
   display: block;
   justify-content: center;
   padding-top: 3%;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .data {
@@ -511,6 +511,13 @@ h1 {
     aspect-ratio: 1;
     padding-top: 50px;
   }
+
+  .card {
+    display: block;
+    justify-content: center;
+    padding-top: 3%;
+    font-size: 1.15rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -519,5 +526,12 @@ h1 {
     width: 45vw;
     aspect-ratio: 1;
     padding-top: 50px;
+  }
+
+  .card {
+    display: block;
+    justify-content: center;
+    padding-top: 3%;
+    font-size: 1.25rem;
   }
 }
