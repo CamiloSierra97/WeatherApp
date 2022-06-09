@@ -7,8 +7,8 @@
   width: 10%;
   aspect-ratio: 1;
   background-color: #eee;
-  border: 20px solid #4B7BE5;
-  border-top: 20px solid #6FDFDF;
+  border: 20px solid #6FDFDF;
+  border-top: 20px solid #4B7BE5;
   margin-left: 50%;
   margin-top: 0.5%;
   border-radius: 50%;
@@ -113,7 +113,8 @@ h1 {
 
 .container {
   position: absolute;
-  width: 90vw;
+  width: 85vw;
+  aspect-ratio: 1;
   padding-top: 50px;
 }
 
@@ -150,8 +151,8 @@ h1 {
 }
 
 .cloudy {
-  width: 600px;
-  height: 600px;
+  width: 100%;
+  aspect-ratio: 1;
   border-radius: 40%;
   z-index: 120;
   background: linear-gradient(to top right, rgba(63, 81, 181, 1) 0%, rgba(3, 155, 229, 1) 40%);
@@ -184,8 +185,8 @@ h1 {
 }
 
 .snowy {
-  width: 600px;
-  height: 600px;
+  width: 100%;
+  aspect-ratio: 1;
   border-radius: 40%;
   z-index: 120;
   background: linear-gradient(to top right, rgba(117, 117, 117, 1) 0%, rgba(33, 33, 33, 1) 90%);
@@ -288,8 +289,8 @@ h1 {
 }
 
 .stormy {
-  width: 600px;
-  height: 600px;
+  width: 100%;
+  aspect-ratio: 1;
   border-radius: 40%;
   z-index: 120;
   background: linear-gradient(to top right, rgba(156, 204, 101, 1) 0%, rgba(38, 198, 218, 1) 50%);
@@ -503,3 +504,20 @@ h1 {
   scrollbar-width: none;
 }
 
+@media screen and (min-width: 768px){
+  .container {
+    position: absolute;
+    width: 80vw;
+    aspect-ratio: 1;
+    padding-top: 50px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    position: absolute;
+    width: 45vw;
+    aspect-ratio: 1;
+    padding-top: 50px;
+  }
+}
