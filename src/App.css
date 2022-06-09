@@ -95,7 +95,7 @@ h1 {
   display: block;
   justify-content: center;
   padding-top: 3%;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .data {
@@ -516,7 +516,7 @@ h1 {
     display: block;
     justify-content: center;
     padding-top: 3%;
-    font-size: 1rem;
+    font-size: 1.15rem;
   }
 }
 
@@ -532,6 +532,6 @@ h1 {
     display: block;
     justify-content: center;
     padding-top: 3%;
-    font-size: 1.25rem;
+    font-size: 2rem;
   }
 }
