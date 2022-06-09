@@ -11,9 +11,9 @@ function App() {
   const API_KEY = '49c7c564cadca82ba7ddccfa38936a19'
 
   useEffect(() => {
-    if (position !== undefined) {
+    if (position !== false) {
       const url = `https://api.openweathermap.org/data/2.5/weather?lat=${position.lat}&lon=${position.lon}&appid=${API_KEY}`
-      axios.get(url)
+      axios.get(position && url)
         .then(res => {
           setWeather(res.data)
           setLoading(false)
@@ -21,6 +21,8 @@ function App() {
         .catch(err => console.log(err))
     }
   }, [position])
+
+  console.log(position)
 
   const getPosition = () => {
 
